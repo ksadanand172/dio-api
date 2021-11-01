@@ -8,11 +8,11 @@ part of 'list_user_response.dart';
 
 ListUserResponse _$ListUserResponseFromJson(Map<String, dynamic> json) {
   return ListUserResponse()
-    ..page = json['page'] as int
-    ..perPage = json['per_page'] as int
-    ..total = json['total'] as int
-    ..totalPages = json['total_pages'] as int
-    ..users = (json['data'] as List)
+    ..page = json['page'] as int?
+    ..perPage = json['per_page'] as int?
+    ..total = json['total'] as int?
+    ..totalPages = json['total_pages'] as int?
+    ..users = (json['data'] as List?)
         ?.map(
             (e) => e == null ? null : User.fromJson(e as Map<String, dynamic>))
         ?.toList();
